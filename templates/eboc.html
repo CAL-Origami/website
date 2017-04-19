@@ -1,0 +1,202 @@
+{% extends "layout.html" %}
+
+{% block title %}EBOC{% endblock %}
+
+{% block content %}
+
+    <head>
+<style>
+table {
+border-collapse: collapse;
+}
+
+table, td, th {
+border: 1px solid black;
+}
+
+td, th {
+text-align: center;
+height: 30px;
+}
+
+</style>
+</head>
+
+<h2 style="text-align:left;">East Bay Origami Convention 2016</h2>
+
+<!-- EBOC Flyer to the right -->
+<div style='float:right;'><img src="{{url_for('static', filename='img/flyer-draft.jpg')}}"  style='height: 440px; width: 340px; margin-left: 20px;'></div>
+
+<p>
+The East Bay Origami Convention is an origami convention held at UC Berkeley. We are currently doing our best to create a low-cost, amazing event for the many origami enthusiasts in the area.
+</p>
+
+<p>
+This will be the first year since 2013 that the convention will be held. For that reason, we have chosen the theme <b><i>Rebirth and Renewal</i></b> for the event. We look forward to seeing you here! <br>
+</p>
+
+
+<div style='width: 460px; margin-top: 10px'>
+    <b><font size="3">GENERAL INFORMATION</font></b><br />
+    <div style="margin-left: 10px">
+        <div style="padding: 5px"></div>
+        <strong>Date & Time</strong>
+        <span style='display: block; margin: 0px 0px 15px 15px'>
+            Sunday, November 13th, 2016, 11am - 7pm<br>
+            (Check-in begins at 10:30am)
+        </span>
+
+        <strong>Location</strong>
+        <span style='display: block; margin: 0px 0px 15px 15px'>
+            Anna Head Alumnae Hall<br>
+            2537 Haste Street<br>
+            Berkeley, CA
+        </span>
+
+        <strong>Events</strong>
+        <ul style='display: block; margin: 0px 0px 15px 15px'>
+            <li>Lectures</li>
+            <li>Model Teachings</li>
+            <li>Origami Games</li>
+            <li>Model Exhibitions</li>
+        </ul>
+
+        <strong>Tickets</strong>
+        <ul style='display: block; margin: 0px 0px 15px 15px'>
+            <li>General Admission: $15</li>
+            <li>Early Registration: $12</li>
+            <li>Cal Students: $10</li>
+            <li>Under age 6: Free!</li>
+        </ul>
+    </div>
+</div>
+
+<div style='clear:both;'></div>
+
+<div style='width: 700px; float: left'>
+
+    <p>
+        <b><font size="3">REGISTRATION</font></b><br>
+        <form method="GET" action="/eboc-register">
+            <button type="submit">Register for EBOC here</button>
+        </form>
+        Thank you and we hope to see you there!
+    </p>
+
+    <p>
+        <strong><font size="3">INSTRUCTORS</font></strong><br /> Our convention could not be possible without our instructors, who will be leading workshops and lectures throughout the day.
+        We are very fortunate to have the following honored guests teaching at our convention:
+        <ul>
+            <li>Bernie Peyton</li>
+            <li>Ekaterina Lukasheva</li>
+            <li>Glenn Sapaden</li>
+            <li>Kayo Kurata</li>
+            <li>Caryn Lum</li>
+            <li>Emily Wong</li>
+            <li>Takaya Iwamoto</li>
+        </ul>
+	</p>
+
+    <p>
+        <strong><font size="3">SCHEDULE</font></strong><br />
+        <table>
+            <col style="width:7%">
+            <col style="width:10%">
+            <col style="width:20%">
+            <col style="width:20%">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Anna Head</th>
+                    <th>Anna Head (Half)</th>
+                    <th>Anna Head (Half)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10:30 AM</td>
+                    <td colspan="3">Check In</td>
+                </tr>
+                <tr>
+                    <td>11:00 AM</td>
+                    <td>Leisure Folding</td>
+                    <td>Emily Wong - Butterfly (Advanced Beginner)</td>
+                    <td>Takaya Iwamoto - Polygonal Mandala (Intermediate)</td>
+                </tr>
+                <tr>
+                    <td>12:00 PM</td>
+                    <td>Leisure Folding</td>
+                    <td>Kate Lukasheva - Modulars and Unseen Connections Lecture</td>
+                    <td>Kayo Kurata - Heart Box (Intermediate)</td>
+                </tr>
+                <tr>
+                    <td>1:00 PM</td>
+                    <td colspan="3">Lunch (not provided, sorry!)</td>
+                </tr>
+                <tr>
+                    <td>2:00 PM</td>
+                    <td>Leisure Folding</td>
+                    <td colspan="2">Kate Lukasheva - Square Star (Intermediate)</td>
+                </tr>
+                <tr>
+                    <td>3:00 PM</td>
+                    <td>Leisure Folding</td>
+                    <td>Glenn Sapaden - Encyclopedia Origamica (Intermediate, dollar bills required)</td>
+                    <td>Caryn Lum - Kamiya Tsuru Rose (Intermediate)</td>
+                </tr>
+                <tr>
+                    <td>4:00 PM</td>
+                    <td>Leisure Folding</td>
+                    <td colspan="2">Bernie Peyton - Heart Line Bear (Advanced)</td>
+                </tr>
+                <tr>
+                    <td>5:00 PM</td>
+                    <td>Leisure Folding</td>
+                    <td colspan="2">Glenn Sapaden - Origomics Lecture</td>
+                </tr>
+                <tr>
+                    <td>6:00 PM</td>
+                    <td>Leisure Folding</td>
+                    <td colspan="3">CONTEST</td>
+
+                </tr>
+                <tr>
+                    <td>7:00 PM</td>
+                    <td colspan="3">Ending Ceremony</td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+
+    <p>
+        <b><font size="3">SUBMITTING A MODEL (for display)</font></b><br>
+        If you're interested in submitting a model, models do not have to be original. As long as proper documentation is provided,
+        such as the <b>name and author of the model</b>, and the <b>folder's name</b>, you may bring any model to the convention to display. <br /><br>It does <u>not</u>
+        have to be part of the Theme.
+    </p>
+
+    <p style="display: inline-block; margin: 0px; width: 518px">
+	    <strong><font size="3">CONVENTION BOOK</font></strong><br />
+        We are going to have a&nbsp;<strong style="">Convention Book&nbsp;</strong>this year!
+        We compiled diagrams and crease patterns from many contributors to create a fantastic convention book this year.
+        Although they will not arrive in time, they will be available for purchase at the convention and we will be shipping them out afterwards.
+        If you would like to order a book but are not attending the convention, email us at <font color="#3333ff"><strong><u><a href="mailto:eastbayorigamicon@gmail.com">eastbayorigamicon@gmail.com</a></u></strong></font>.<br>
+    </p>
+
+    <p>
+        <strong><font size="3">TEACHING</font></strong><br />
+        Registration for teaching is now closed. If you would like to come to our event, please consider registering for the convention.
+	</p>
+
+    <p>
+        <strong><font size="3">SPONSORSHIP</font></strong><br />We are looking for sponsors for our organization, and in return, we will add your logo and information to our advertisement materials.
+        We will accept both money and material donations. If you are interested, please email us directly at <font color="#3333ff"><strong><u><a href="mailto:eastbayorigamicon@gmail.com">eastbayorigamicon@gmail.com</a></u></strong></font>.<br>
+	</p>
+
+
+	<!-- end volunteering to sponsorship div --></div>
+
+
+<div style="clear:both; "></div>
+
+{% endblock %}
